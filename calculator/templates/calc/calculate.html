@@ -1,0 +1,55 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static "calculator/custom.css" %}">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <title>Calculator</title>
+</head>
+<body>
+  <div class = "title"  align="center">
+    <h2><b><i>CALCULATOR</i></b></h2>
+  </div>
+  <form name="Calculator" class = "calculator" >
+    <table border="2" align="center" cellpadding="15" cellspacing="12">
+      <tr>
+        <td colspan="3">&nbsp;
+          <input type="text" name="Input" Size="35" id="display">
+        </td>
+      </tr>
+      <tr>
+        <td><input type="button" name = "one" style="font-size:30px" value=" 1 " OnClick="Calculator.Input.value += '1'"></td>
+        <td><input type="button" name = "two" style = "font-size:30px" value=" 2 " OnCLick="Calculator.Input.value += '2'"></td>
+        <td><input type="button" name = "three" style="font-size:30px" value=" 3 " OnClick="Calculator.Input.value += '3'"></td>
+        <td><input type="button" name="add" class ="btnTop" style="font-size:30px" value=" + " OnClick="Calculator.Input.value += ' + '"></td>
+      </tr>
+      <tr>
+        <td><input type="button" name = "four" style="font-size:30px" value=" 4 " OnClick="Calculator.Input.value += '4'"></td>
+        <td><input type="button" name = "five" style="font-size:30px" value=" 5 " OnCLick="Calculator.Input.value += '5'"></td>
+        <td><input type="button" name = "six" style="font-size:30px" value=" 6 " OnClick="Calculator.Input.value += '6'"></td>
+        <td><input type="button" name = "minus" style="font-size:30px" value=" - " OnClick="Calculator.Input.value += ' - '"></td>
+      </tr>
+      <tr>
+        <td><input type="button" name = "seven" style="font-size:30px" value=" 7 " OnClick="Calculator.Input.value += '7'"></td>
+        <td><input type="button" name = "eight" style="font-size:30px" value=" 8 " OnCLick="Calculator.Input.value += '8'"></td>
+        <td><input type="button" name = "nine" style="font-size:30px" value=" 9 " OnClick="Calculator.Input.value += '9'"></td>
+        <td><input type="button" name = "mul" style="font-size:30px" value=" * "
+        OnClick="Calculator.Input.value += ' * '"></td>
+      </tr>
+      <tr>
+        <td><input type="button" name = "clear" style="font-size:30px" value=" c " OnClick="Calculator.Input.value = ''"></td>
+        <td><input type="button" name="zero" style="font-size:30px" value=" 0 " OnClick="Calculator.Input.value += '0'"></td>
+        <td><input type="button" name="DoIt" style="font-size:30px" value=" = " OnClick="Calculator.Input.value = eval(Calculator.Input.value)"></td>
+        <td><input type="button" name="div" style="font-size:30px" value=" / " OnClick="Calculator.Input.value += ' / '"></td>
+      </tr>
+    </table>
+  </form>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
